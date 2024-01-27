@@ -6,8 +6,8 @@ services:
     build: ./mysql
     volumes:
       - ${PWD}/mysql/data:/var/lib/mysql
-      - ${PWD}/mysql/sql:/opt/sql
       # for init and backup
+      - ${PWD}/mysql/sql:/opt/sql
       - ${PWD}/mysql/init:/docker-entrypoint-initdb.d/
     environment:
       - "MYSQL_ROOT_PASSWORD=root"
